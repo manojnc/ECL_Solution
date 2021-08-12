@@ -40,7 +40,6 @@ class solution():
 
                         uid=exp_json.get('id')
 
-                        #print(score,uid)
                         if self.counter < self.num_records:
                             heap.heappush(self.heaparray,score)
                             res[score]=uid
@@ -60,7 +59,6 @@ class solution():
                     except Exception as e:
                         print(str(e))
                         continue
-        #print(self.heaparray)
         if self.num_records > line_count:
             sys.exit("Number of records requested is greater than total number of valid lines in the file")
         return res
