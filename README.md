@@ -1,13 +1,13 @@
 # ECL_Solution
-Introduction :
+**Introduction** :
 This tool is designed to parse a given input file and aggregate the records based on the associated score in descending order. The job accepts two arguments, a filename and number of top N records to be displayed. 
 
-Using the Tool :
+**Using the Tool** :
 python3 Solution.py filename num_of_records
 Expected output is an array of json objects with id and associated score.
 
 
-Validations Performed by the tool:
+**Validations Performed by the tool**:
 1) Number of command line arguments should be exactly two. Else the job exits with appropriate error message.
 2) Filename passed should exist and be accessible to the job. Otherwise the job exits with status code 2.
 3) Number of records should be a valid number.
@@ -18,7 +18,7 @@ Validations Performed by the tool:
 8) If the value in each line is not a proper json object then the job exits with status code 1.
 9) If the value is valid json but it does not have a key named "id" then the job exits with status code 1.
 
-DESIGN DECISIONS :
+**DESIGN DECISIONS** :
 1) The underlying script is written in python3.
 2) It is assumed that the score value is unique (as no logic is provided on how to sort two records with same score. This can be changed if necessary)
 3) Priority Queue algorith is used to reduce the memory footprint. Only N number of records that are required in the output are stored in the memory at any given point of time.
